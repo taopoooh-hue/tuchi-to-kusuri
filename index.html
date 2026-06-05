@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>土と薬｜薬剤師ハシモトサトシがつくる、ふだんのうつわ</title>
+<meta name="description" content="「土と薬」— 会津で薬局に立つかたわら、土をこねています。薪ストーブの灰から釉薬を作る、薬剤師ハシモトサトシの手しごとのうつわ。会津本郷せと市に出品します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f4efe4;
+    --paper-deep:#ebe2d1;
+    --paper-card:#f9f5ec;
+    --ink:#2a2521;
+    --ink-soft:#6c645a;
+    --clay:#a9542f;
+    --clay-deep:#7c3c21;
+    --ash:#8c8675;
+    --line:rgba(42,37,33,.14);
+    --serif:'Shippori Mincho',serif;
+    --sans:'Zen Kaku Gothic New',sans-serif;
+    --latin:'Cormorant Garamond',serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans);
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.95;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.04;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+
+  /* ---- layout ---- */
+  .wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+  section{position:relative}
+  .label{
+    font-family:var(--latin);font-style:italic;font-size:.95rem;letter-spacing:.08em;
+    color:var(--clay);text-transform:lowercase;
+  }
+  .label::before{content:"— "}
+  .jp-head{
+    font-family:var(--serif);font-weight:600;line-height:1.5;
+    letter-spacing:.04em;color:var(--ink);
+  }
+
+  /* ---- header ---- */
+  header{
+    position:sticky;top:0;z-index:100;
+    backdrop-filter:saturate(120%) blur(6px);
+    background:rgba(244,239,228,.82);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{font-family:var(--serif);font-weight:700;font-size:1.18rem;letter-spacing:.14em}
+  .brand small{font-family:var(--latin);font-style:italic;font-weight:500;color:var(--clay);font-size:.7rem;letter-spacing:.1em;display:block;margin-top:-4px}
+  .menu{display:flex;gap:34px;font-size:.92rem;letter-spacing:.08em}
+  .menu a{position:relative;padding:4px 0;color:var(--ink-soft);transition:color .3s}
+  .menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--clay);transition:width .35s}
+  .menu a:hover{color:var(--ink)}
+  .menu a:hover::after{width:100%}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+  .burger span{width:24px;height:1.5px;background:var(--ink);transition:.3s}
+
+  /* ---- hero ---- */
+  .hero{padding:clamp(70px,12vw,140px) 0 clamp(60px,9vw,110px);overflow:hidden;position:relative}
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:0;
+    background:url("images/hero.jpg") center 32%/cover no-repeat;
+    opacity:.22;
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;z-index:0;
+    background:linear-gradient(180deg,rgba(244,239,228,.55) 0%,rgba(244,239,228,.82) 100%);
+  }
+  .hero .wrap{position:relative;z-index:1}
+  .hero-grid{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+  .hero-eyebrow{font-family:var(--latin);font-style:italic;color:var(--clay);letter-spacing:.1em;font-size:1.05rem;margin-bottom:22px}
+  .hero h1{
+    font-family:var(--serif);font-weight:700;
+    font-size:clamp(2.5rem,7vw,4.6rem);line-height:1.18;letter-spacing:.03em;margin-bottom:26px;
+  }
+  .hero h1 .clay{color:var(--clay)}
+  .hero p.lead{font-size:1.05rem;color:var(--ink-soft);max-width:30em;margin-bottom:38px}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+  .btn{
+    font-family:var(--sans);font-size:.92rem;letter-spacing:.08em;
+    padding:14px 30px;border-radius:2px;transition:.32s;cursor:pointer;display:inline-block;
+  }
+  .btn-fill{background:var(--clay);color:#f9f5ec;border:1px solid var(--clay)}
+  .btn-fill:hover{background:var(--clay-deep);border-color:var(--clay-deep)}
+  .btn-line{border:1px solid var(--line);color:var(--ink)}
+  .btn-line:hover{border-color:var(--ink);background:rgba(42,37,33,.03)}
+  .hero-vertical{
+    writing-mode:vertical-rl;font-family:var(--serif);font-weight:600;
+    font-size:clamp(1rem,1.6vw,1.25rem);letter-spacing:.5em;color:var(--ash);
+    height:340px;border-right:1px solid var(--line);padding-right:30px;
+  }
+
+  /* ---- about ---- */
+  .about{padding:clamp(60px,9vw,110px) 0;border-top:1px solid var(--line)}
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,90px);align-items:center}
+  .about h2{font-size:clamp(1.6rem,3.2vw,2.2rem);margin:14px 0 28px}
+  .about p{color:var(--ink-soft);margin-bottom:20px}
+  .about .sign{font-family:var(--serif);font-weight:600;color:var(--ink);letter-spacing:.1em;margin-top:30px}
+  .about .sign small{display:block;font-family:var(--sans);font-weight:400;color:var(--ash);font-size:.82rem;letter-spacing:.04em;margin-top:4px}
+  .portrait{
+    aspect-ratio:4/5;background:var(--paper-deep);border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
+  }
+  .portrait .ph{text-align:center;color:var(--ash);font-size:.82rem;letter-spacing:.1em}
+  .portrait svg{width:46%;opacity:.5}
+  .portrait img{width:100%;height:100%;object-fit:cover}
+
+  /* ---- feature strip (薬剤師×陶芸) ---- */
+  .feature{background:var(--ink);color:var(--paper);padding:clamp(56px,8vw,96px) 0}
+  .feature .wrap{display:grid;grid-template-columns:auto 1fr;gap:clamp(34px,5vw,70px);align-items:center}
+  .feature .label{color:#d99a73}
+  .feature h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.6;letter-spacing:.05em;margin:14px 0 0}
+  .feature p{color:rgba(244,239,228,.72);margin-top:24px;max-width:34em}
+  .feature .kanji{
+    font-family:var(--serif);writing-mode:vertical-rl;font-size:clamp(2.4rem,5vw,3.6rem);
+    font-weight:700;letter-spacing:.25em;color:#d99a73;line-height:1.1;height:280px;
+  }
+
+  /* ---- works ---- */
+  .works{padding:clamp(60px,9vw,110px) 0}
+  .works-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:48px}
+  .works-head h2{font-size:clamp(1.6rem,3.2vw,2.2rem);margin-top:12px}
+  .works-head .note{font-size:.85rem;color:var(--ash);max-width:24em}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .card{
+    background:var(--paper-card);border:1px solid var(--line);
+    transition:transform .4s ease,box-shadow .4s ease;
+  }
+  .card:hover{transform:translateY(-5px);box-shadow:0 18px 40px -28px rgba(42,37,33,.5)}
+  .card .thumb{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background:var(--paper-deep);border-bottom:1px solid var(--line)}
+  .card .thumb svg{width:52%;height:52%}
+  .card .meta{padding:18px 22px 22px}
+  .card .meta h3{font-family:var(--serif);font-weight:600;font-size:1.12rem;letter-spacing:.08em}
+  .card .meta span{font-size:.8rem;color:var(--ash);letter-spacing:.05em}
+
+  /* ---- event ---- */
+  .event{padding:clamp(60px,9vw,110px) 0;border-top:1px solid var(--line)}
+  .event-card{
+    background:var(--paper-card);border:1px solid var(--line);
+    padding:clamp(34px,5vw,64px);display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(34px,5vw,64px);align-items:center;
+  }
+  .event-card h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin:14px 0 22px;line-height:1.4}
+  .event-card p{color:var(--ink-soft);margin-bottom:30px;max-width:30em}
+  .event-info{border-top:1px solid var(--line)}
+  .event-info dl{display:grid;grid-template-columns:auto 1fr;gap:0}
+  .event-info dt,.event-info dd{padding:16px 4px;border-bottom:1px solid var(--line);font-size:.95rem}
+  .event-info dt{font-family:var(--serif);font-weight:600;letter-spacing:.1em;color:var(--clay);padding-right:26px;white-space:nowrap}
+  .event-info dd{color:var(--ink)}
+  .event-info .big{font-family:var(--serif);font-size:1.25rem;font-weight:700}
+
+  /* ---- contact ---- */
+  .contact{padding:clamp(64px,9vw,120px) 0;text-align:center;border-top:1px solid var(--line)}
+  .contact h2{font-size:clamp(1.8rem,4vw,2.8rem);margin:16px auto 18px;max-width:16em}
+  .contact p{color:var(--ink-soft);max-width:28em;margin:0 auto 44px}
+  .links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+  .links a{
+    display:inline-flex;align-items:center;gap:10px;padding:14px 26px;
+    border:1px solid var(--line);border-radius:2px;font-size:.92rem;letter-spacing:.06em;transition:.32s;
+  }
+  .links a:hover{border-color:var(--clay);color:var(--clay);transform:translateY(-2px)}
+  .links svg{width:17px;height:17px}
+
+  /* ---- footer ---- */
+  footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;color:var(--ash);font-size:.82rem;letter-spacing:.06em}
+  footer .brand{font-size:1rem;color:var(--ink-soft);margin-bottom:8px;letter-spacing:.14em}
+
+  /* ---- reveal ---- */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---- responsive ---- */
+  @media(max-width:860px){
+    .menu{display:none}
+    .menu.open{
+      display:flex;flex-direction:column;position:absolute;top:68px;left:0;right:0;
+      background:var(--paper);border-bottom:1px solid var(--line);padding:18px 32px 26px;gap:18px;
+    }
+    .burger{display:flex}
+    .hero-grid{grid-template-columns:1fr}
+    .hero-vertical{display:none}
+    .about-grid{grid-template-columns:1fr;gap:40px}
+    .portrait{max-width:320px;order:-1}
+    .feature .wrap{grid-template-columns:1fr}
+    .feature .kanji{writing-mode:horizontal-tb;height:auto;letter-spacing:.15em}
+    .grid{grid-template-columns:repeat(2,1fr);gap:16px}
+    .event-card{grid-template-columns:1fr}
+  }
+  @media(max-width:520px){
+    .wrap{padding:0 22px}
+    .grid{grid-template-columns:1fr 1fr}
+    .hero-cta{flex-direction:column;align-items:stretch}
+    .btn{text-align:center}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">土と薬<small>tsuchi to kusuri</small></div>
+    <nav class="menu" id="menu">
+      <a href="#about">つくり手</a>
+      <a href="#works">うつわ</a>
+      <a href="#event">せと市</a>
+      <a href="#contact">れんらく</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="メニュー"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <div class="hero-eyebrow">土と薬 — tsuchi to kusuri, Aizu</div>
+      <h1>薬剤師がつくる、<br>ふだんの<span class="clay">うつわ</span>。</h1>
+      <p class="lead">会津で薬局に立つかたわら、土をこねています。<br>毎日の食卓が、すこし整うような器を。ひとつずつ手づくりで。</p>
+      <div class="hero-cta">
+        <a href="#event" class="btn btn-fill">会津本郷せと市に出品します</a>
+        <a href="#works" class="btn btn-line">うつわを見る</a>
+      </div>
+    </div>
+    <div class="hero-vertical reveal">土と暮らしと、すこしの実験</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="portrait reveal">
+      <img src="images/portrait.jpg" alt="土と薬・ハシモトサトシ。自作の大皿を持って会津の田園に立つ姿">
+    </div>
+    <div class="reveal">
+      <span class="label">about</span>
+      <h2 class="jp-head">土と、薬と、毎日のこと。</h2>
+      <p>平日は薬剤師として、会津の地域薬局に立っています。人の暮らしのいちばん近くで、からだのことを一緒に考える——そんな仕事です。</p>
+      <p>休みの日は工房で土に向かいます。薬を扱う目で材料を確かめるのが癖になっていて、薪ストーブの灰を釉薬にしてみたり、配合を変えてみたり。うまくいかないことも多いけれど、それも手づくりの味だと思って楽しんでいます。</p>
+      <p>つくるのは、豆皿や箸置き、飯碗といった、ふだん使いの小さなうつわ。ひとつとして同じものはありません。気軽に手に取ってもらえたら、それがいちばんうれしいです。</p>
+      <div class="sign">ハシモトサトシ
+        <small>薬剤師／プライマリ・ケア認定薬剤師　会津・みずき薬局</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE -->
+<section class="feature">
+  <div class="wrap">
+    <div class="kanji reveal">灰と土</div>
+    <div class="reveal">
+      <span class="label">pharmacist × pottery</span>
+      <h2>薬を扱う目で、土を見る。</h2>
+      <p>薪ストーブの灰から釉薬をつくる。そんな実験も、「材料をきちんと確かめる」という薬剤師の習い性から始まりました。同じ灰でも、季節や焼き方で一つとして同じ色は出ません。そのうつろいごと、楽しんでいます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- WORKS -->
+<section class="works" id="works">
+  <div class="wrap">
+    <div class="works-head reveal">
+      <div>
+        <span class="label">works</span>
+        <h2 class="jp-head">うつわ</h2>
+      </div>
+      <p class="note">※ 画像は仮のイラストです。実物の写真に差し替えてください。</p>
+    </div>
+    <div class="grid">
+      <div class="card reveal"><div class="thumb"><svg viewBox="0 0 100 100" fill="none" stroke="#a9542f" stroke-width="2.2"><ellipse cx="50" cy="50" rx="38" ry="12"/><ellipse cx="50" cy="48" rx="26" ry="7"/></svg></div><div class="meta"><h3>豆皿</h3><span>mamezara</span></div></div>
+      <div class="card reveal"><div class="thumb"><svg viewBox="0 0 100 100" fill="none" stroke="#a9542f" stroke-width="2.2"><path d="M22 58 Q22 40 50 40 Q78 40 78 58"/><path d="M22 58 Q22 70 50 70 Q78 70 78 58"/><path d="M50 40 V32"/></svg></div><div class="meta"><h3>箸置き</h3><span>hashioki</span></div></div>
+      <div class="card reveal"><div class="thumb"><svg viewBox="0 0 100 100" fill="none" stroke="#a9542f" stroke-width="2.2"><path d="M26 46 Q26 76 50 76 Q74 76 74 46"/><ellipse cx="50" cy="46" rx="24" ry="7"/></svg></div><div class="meta"><h3>飯碗</h3><span>meshiwan</span></div></div>
+      <div class="card reveal"><div class="thumb"><svg viewBox="0 0 100 100" fill="none" stroke="#a9542f" stroke-width="2.2"><path d="M32 42 L36 72 Q50 78 64 72 L68 42"/><ellipse cx="50" cy="42" rx="18" ry="6"/></svg></div><div class="meta"><h3>湯のみ</h3><span>yunomi</span></div></div>
+      <div class="card reveal"><div class="thumb"><svg viewBox="0 0 100 100" fill="none" stroke="#a9542f" stroke-width="2.2"><path d="M36 48 Q36 68 50 68 Q64 68 64 48"/><ellipse cx="50" cy="48" rx="14" ry="5"/><path d="M44 78 h12"/></svg></div><div class="meta"><h3>ぐい呑み</h3><span>guinomi</span></div></div>
+      <div class="card reveal"><div class="thumb"><svg viewBox="0 0 100 100" fill="none" stroke="#a9542f" stroke-width="2.2"><path d="M24 50 Q24 74 50 74 Q76 74 76 50"/><ellipse cx="50" cy="50" rx="26" ry="8"/></svg></div><div class="meta"><h3>小鉢</h3><span>kobachi</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENT -->
+<section class="event" id="event">
+  <div class="wrap">
+    <div class="event-card reveal">
+      <div>
+        <span class="label">exhibition</span>
+        <h2 class="jp-head">会津本郷せと市に<br>出品します。</h2>
+        <p>東北最古の焼き物産地・会津美里町（旧本郷町）で開かれる、夏の風物詩。朝4時、まだ薄暗いなか、懐中電灯片手の掘り出し物さがしが始まります。豆皿や箸置き、小さなうつわを並べてお待ちしています。</p>
+        <a href="#contact" class="btn btn-fill">最新情報をうけとる</a>
+      </div>
+      <div class="event-info">
+        <dl>
+          <dt>日程</dt><dd class="big">2026年6月14日（日）</dd>
+          <dt>時間</dt><dd>4:00 〜 12:00</dd>
+          <dt>会場</dt><dd>瀬戸町通り（会津美里町 本郷地域）</dd>
+          <dt>アクセス</dt><dd>会津本郷駅から徒歩15分</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <span class="label">contact</span>
+    <h2 class="jp-head">うつわのこと、お気軽に。</h2>
+    <p>制作のようすや出品のお知らせは、note やSNSで発信しています。お問い合わせもこちらからどうぞ。</p>
+    <div class="links">
+      <a href="https://note.com/hashtag/%E3%83%8F%E3%82%B7%E3%83%A2%E3%83%88%E3%82%B5%E3%83%88%E3%82%B7" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 4h11l3 3v13H5z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 9h8M8 13h8M8 17h5" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+        note（活動の記録）
+      </a>
+      <a href="https://x.com/hayakuhantou" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3h5.5l4 5.5L17.5 3H21l-6.5 8.5L21.5 21H16l-4.3-5.9L6.5 21H3l7-9z"/></svg>
+        X（@hayakuhantou）
+      </a>
+      <a href="#" data-placeholder="instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+        Instagram（準備中）
+      </a>
+      <a href="mailto:your@email.example" data-placeholder="mail">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        メールでとい合わせ
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">土と薬</div>
+  薬剤師ハシモトサトシがつくる、ふだんのうつわ ／ 会津<br>
+  © 2026 Tsuchi to Kusuri / Hashimoto Satoshi
+</footer>
+
+<script>
+  const burger=document.getElementById('burger');
+  const menu=document.getElementById('menu');
+  burger.addEventListener('click',()=>menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach((e,i)=>{
+      if(e.isIntersecting){
+        const els=[...e.target.parentElement.querySelectorAll('.reveal')];
+        e.target.style.transitionDelay=(els.indexOf(e.target)%3*90)+'ms';
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  document.querySelectorAll('[data-placeholder]').forEach(a=>{
+    a.addEventListener('click',ev=>{
+      if(a.getAttribute('href')==='#'){ev.preventDefault();}
+    });
+  });
+</script>
+</body>
+</html>
