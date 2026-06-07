@@ -144,8 +144,10 @@
     transition:transform .4s ease,box-shadow .4s ease;
   }
   .card:hover{transform:translateY(-5px);box-shadow:0 18px 40px -28px rgba(42,37,33,.5)}
-  .card .thumb{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background:var(--paper-deep);border-bottom:1px solid var(--line)}
+  .card .thumb{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:var(--paper-deep);border-bottom:1px solid var(--line)}
   .card .thumb svg{width:52%;height:52%}
+  .card .thumb img{width:100%;height:100%;object-fit:cover}
+  .card .thumb.square{aspect-ratio:1/1}
   .card .meta{padding:18px 22px 22px}
   .card .meta h3{font-family:var(--serif);font-weight:600;font-size:1.12rem;letter-spacing:.08em}
   .card .meta span{font-size:.8rem;color:var(--ash);letter-spacing:.05em}
@@ -287,12 +289,14 @@
       <p class="note">※ 画像は仮のイラストです。実物の写真に差し替えてください。</p>
     </div>
     <div class="grid">
-      <div class="card reveal"><div class="thumb"><svg viewBox="0 0 100 100" fill="none" stroke="#a9542f" stroke-width="2.2"><ellipse cx="50" cy="50" rx="38" ry="12"/><ellipse cx="50" cy="48" rx="26" ry="7"/></svg></div><div class="meta"><h3>豆皿</h3><span>mamezara</span></div></div>
-      <div class="card reveal"><div class="thumb"><svg viewBox="0 0 100 100" fill="none" stroke="#a9542f" stroke-width="2.2"><path d="M22 58 Q22 40 50 40 Q78 40 78 58"/><path d="M22 58 Q22 70 50 70 Q78 70 78 58"/><path d="M50 40 V32"/></svg></div><div class="meta"><h3>箸置き</h3><span>hashioki</span></div></div>
-      <div class="card reveal"><div class="thumb"><svg viewBox="0 0 100 100" fill="none" stroke="#a9542f" stroke-width="2.2"><path d="M26 46 Q26 76 50 76 Q74 76 74 46"/><ellipse cx="50" cy="46" rx="24" ry="7"/></svg></div><div class="meta"><h3>飯碗</h3><span>meshiwan</span></div></div>
-      <div class="card reveal"><div class="thumb"><svg viewBox="0 0 100 100" fill="none" stroke="#a9542f" stroke-width="2.2"><path d="M32 42 L36 72 Q50 78 64 72 L68 42"/><ellipse cx="50" cy="42" rx="18" ry="6"/></svg></div><div class="meta"><h3>湯のみ</h3><span>yunomi</span></div></div>
-      <div class="card reveal"><div class="thumb"><svg viewBox="0 0 100 100" fill="none" stroke="#a9542f" stroke-width="2.2"><path d="M36 48 Q36 68 50 68 Q64 68 64 48"/><ellipse cx="50" cy="48" rx="14" ry="5"/><path d="M44 78 h12"/></svg></div><div class="meta"><h3>ぐい呑み</h3><span>guinomi</span></div></div>
-      <div class="card reveal"><div class="thumb"><svg viewBox="0 0 100 100" fill="none" stroke="#a9542f" stroke-width="2.2"><path d="M24 50 Q24 74 50 74 Q76 74 76 50"/><ellipse cx="50" cy="50" rx="26" ry="8"/></svg></div><div class="meta"><h3>小鉢</h3><span>kobachi</span></div></div>
+      <div class="card reveal"><div class="thumb"><img src="images/meshiwan.jpg" alt="飯碗"></div><div class="meta"><h3>飯碗</h3><span>meshiwan</span></div></div>
+      <div class="card reveal"><div class="thumb"><img src="images/coffeecup.jpg" alt="コーヒーカップ"></div><div class="meta"><h3>コーヒーカップ</h3><span>coffee cup</span></div></div>
+      <div class="card reveal"><div class="thumb"><img src="images/guinomi.jpg" alt="ぐい呑み"></div><div class="meta"><h3>ぐい呑み</h3><span>guinomi</span></div></div>
+      <div class="card reveal"><div class="thumb"><img src="images/tokkuri.jpg" alt="徳利"></div><div class="meta"><h3>徳利</h3><span>tokkuri</span></div></div>
+      <div class="card reveal"><div class="thumb"><img src="images/teapot.jpg" alt="ティーポット"></div><div class="meta"><h3>ティーポット</h3><span>tea pot</span></div></div>
+      <div class="card reveal"><div class="thumb"><img src="images/fukuromono.jpg" alt="袋物"></div><div class="meta"><h3>袋物</h3><span>fukuromono</span></div></div>
+      <div class="card reveal"><div class="thumb square"><img src="images/mamezara.jpg" alt="豆皿"></div><div class="meta"><h3>豆皿</h3><span>mamezara</span></div></div>
+      <div class="card reveal"><div class="thumb square"><img src="images/hashioki.jpg" alt="箸置き"></div><div class="meta"><h3>箸置き</h3><span>hashioki</span></div></div>
     </div>
   </div>
 </section>
