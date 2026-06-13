@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>★限定1点★ 幸せになる壺 ★今だけ特別価格★</title>
+<style>
+  :root{
+    --gold:#ffd84a;
+    --gold-deep:#caa400;
+    --red:#8a0f0f;
+    --red-deep:#4a0606;
+    --purple:#3d0a4d;
+    --cream:#fff8e1;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  body{
+    font-family: "Hiragino Mincho ProN","Yu Mincho", serif;
+    background: radial-gradient(circle at 50% -10%, var(--purple) 0%, var(--red-deep) 55%, #1a0303 100%);
+    color: var(--cream);
+    min-height:100vh;
+    padding-bottom: 60px;
+  }
+
+  /* 流れる帯 */
+  marquee{
+    background: var(--gold);
+    color: var(--red-deep);
+    font-weight:700;
+    font-size: 14px;
+    padding: 6px 0;
+    letter-spacing: .1em;
+    border-bottom: 3px double var(--red-deep);
+  }
+
+  .wrap{
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 24px 18px 0;
+  }
+
+  /* タイトル */
+  .badge-row{
+    display:flex;
+    justify-content:center;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  .badge{
+    background: var(--red);
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    border-radius: 999px;
+    padding: 4px 14px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .15em;
+    animation: blink 1.4s infinite;
+  }
+  @keyframes blink{
+    0%, 60% { opacity: 1; }
+    80% { opacity: .25; }
+    100% { opacity: 1; }
+  }
+
+  h1{
+    text-align:center;
+    font-size: 38px;
+    letter-spacing: .25em;
+    color: var(--gold);
+    text-shadow: 0 0 10px rgba(255,216,74,.55), 0 2px 0 rgba(0,0,0,.4);
+    padding: 4px 0 2px;
+  }
+  .sub{
+    text-align:center;
+    font-size: 13px;
+    letter-spacing: .3em;
+    color: var(--gold);
+    margin-bottom: 18px;
+    opacity: .9;
+  }
+
+  /* 写真フレーム */
+  .frame{
+    border: 6px double var(--gold);
+    background: rgba(0,0,0,.25);
+    padding: 14px;
+    margin: 0 auto 18px;
+    max-width: 320px;
+    box-shadow: 0 0 0 1px var(--gold-deep), 0 8px 30px rgba(0,0,0,.5);
+  }
+  .frame img{
+    display:block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background: #fff3d6;
+  }
+  .frame .cap{
+    text-align:center;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: .2em;
+    margin-top: 8px;
+  }
+
+  /* コピー */
+  .lead{
+    text-align:center;
+    font-size: 15px;
+    line-height: 2;
+    letter-spacing: .04em;
+    margin: 0 auto 20px;
+    max-width: 480px;
+  }
+  .lead .em{
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  /* 価格 */
+  .price-box{
+    background: var(--red);
+    border: 3px solid var(--gold);
+    border-radius: 8px;
+    text-align:center;
+    padding: 18px 10px;
+    margin: 0 auto 22px;
+    max-width: 420px;
+  }
+  .price-old{
+    font-size: 14px;
+    color: #e0c9c9;
+    text-decoration: line-through;
+    letter-spacing: .1em;
+  }
+  .price-new{
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: .08em;
+    text-shadow: 0 2px 4px rgba(0,0,0,.5);
+  }
+  .price-new small{ font-size: 18px; }
+  .price-note{
+    font-size: 11px;
+    color: var(--gold);
+    margin-top: 4px;
+    letter-spacing: .1em;
+  }
+
+  /* ご利益リスト */
+  .benefits{
+    list-style: none;
+    max-width: 420px;
+    margin: 0 auto 24px;
+    border-top: 1px dashed var(--gold-deep);
+  }
+  .benefits li{
+    padding: 10px 4px;
+    border-bottom: 1px dashed var(--gold-deep);
+    font-size: 13.5px;
+    display:flex;
+    gap: 8px;
+    align-items:flex-start;
+  }
+  .benefits li::before{
+    content: "✦";
+    color: var(--gold);
+    flex: none;
+  }
+  .benefits .note{
+    font-size: 10px;
+    color: #cdb8b8;
+    display:block;
+    margin-top: 2px;
+  }
+
+  /* 口コミ */
+  .reviews-title, .section-title{
+    text-align:center;
+    font-size: 15px;
+    letter-spacing: .3em;
+    color: var(--gold);
+    margin: 0 auto 14px;
+    position: relative;
+  }
+  .reviews-title::before, .reviews-title::after,
+  .section-title::before, .section-title::after{
+    content: "◆◆◆";
+    font-size: 10px;
+    margin: 0 10px;
+    color: var(--gold-deep);
+  }
+  .review{
+    background: rgba(255,255,255,.06);
+    border: 1px solid var(--gold-deep);
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin: 0 auto 10px;
+    max-width: 460px;
+    font-size: 12.5px;
+    line-height: 1.9;
+  }
+  .review .who{
+    display:block;
+    text-align:right;
+    color: var(--gold);
+    font-size: 11px;
+    margin-top: 6px;
+    letter-spacing: .1em;
+  }
+
+  /* ボタン */
+  .cta-wrap{
+    text-align:center;
+    margin: 30px auto;
+  }
+  .cta{
+    display:inline-block;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .2em;
+    color: var(--red-deep);
+    background: linear-gradient(180deg, #fff6c9, var(--gold) 60%, var(--gold-deep));
+    border: 3px solid var(--cream);
+    border-radius: 999px;
+    padding: 16px 36px;
+    cursor: pointer;
+    box-shadow: 0 0 0 4px var(--red), 0 10px 24px rgba(0,0,0,.5);
+    animation: pulse 1.6s infinite;
+  }
+  @keyframes pulse{
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.045); }
+  }
+  .cta:active{ transform: scale(.97); }
+  .cta-note{
+    font-size: 11px;
+    color: var(--gold);
+    margin-top: 10px;
+    letter-spacing: .1em;
+  }
+
+  /* 購入後リビール */
+  #reveal{
+    display:none;
+    margin-top: 30px;
+    text-align:center;
+    border-top: 3px double var(--gold);
+    padding-top: 26px;
+  }
+  #reveal.show{
+    display:block;
+    animation: fadein .6s ease;
+  }
+  @keyframes fadein{
+    from{ opacity:0; transform: translateY(12px); }
+    to{ opacity:1; transform: translateY(0); }
+  }
+  #reveal h2{
+    font-size: 22px;
+    letter-spacing: .2em;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  #reveal .msg{
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+    letter-spacing: .04em;
+  }
+  .daichi-frame{
+    border: 6px double var(--gold);
+    background: rgba(0,0,0,.25);
+    padding: 14px;
+    margin: 0 auto;
+    max-width: 320px;
+    box-shadow: 0 0 0 1px var(--gold-deep), 0 8px 30px rgba(0,0,0,.5);
+  }
+  .daichi-frame img{
+    display:block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    background: #fff3d6;
+  }
+  .daichi-frame .cap{
+    text-align:center;
+    font-size: 13px;
+    color: var(--gold);
+    letter-spacing: .2em;
+    margin-top: 10px;
+    font-weight: 700;
+  }
+
+  /* フッター */
+  footer{
+    max-width: 640px;
+    margin: 40px auto 0;
+    padding: 16px 18px 0;
+    border-top: 1px solid var(--gold-deep);
+    font-size: 10px;
+    color: #cdb8b8;
+    line-height: 1.8;
+    letter-spacing: .04em;
+    text-align:center;
+  }
+</style>
+</head>
+<body>
+
+  <marquee scrollamount="6">
+    ★★★ 衝動買い注意 ★★★　本日限定タイムセール開催中　★★★　残りわずか1点　★★★　この壺を見た方は必ずご検討ください　★★★
+  </marquee>
+
+  <div class="wrap">
+
+    <div class="badge-row">
+      <span class="badge">数量限定 1点</span>
+      <span class="badge">本日限定価格</span>
+      <span class="badge">満足度99.9%</span>
+    </div>
+
+    <h1>幸せになる壺</h1>
+    <div class="sub">〜 一家に一つ、運命が変わる 〜</div>
+
+    <div class="frame">
+      <img src="tsubo.jpg" alt="幸せになる壺"
+           onerror="this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27400%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23fff3d6%27/%3E%3Ctext x=%2750%25%27 y=%2745%25%27 font-size=%2718%27 text-anchor=%27middle%27 fill=%27%238a0f0f%27 font-family=%27sans-serif%27%3Etsubo.jpg%3C/text%3E%3Ctext x=%2750%25%27 y=%2758%25%27 font-size=%2712%27 text-anchor=%27middle%27 fill=%27%238a0f0f%27 font-family=%27sans-serif%27%3Eをこのフォルダに置いてください%3C/text%3E%3C/svg%3E'">
+      <div class="cap">― 世界にひとつだけの開運壺 ―</div>
+    </div>
+
+    <p class="lead">
+      古来より「これを手にした者には、静かなる福が訪れる」と語り継がれてきた壺と、よく似た形をしています。<br>
+      職人が一つひとつ、心を込めて手挽きしました（量産は一切しておりません＝在庫1点）。<br>
+      玄関やリビングに置くだけで、<span class="em">なんとなく運気が上がった気がする</span>かもしれません。
+    </p>
+
+    <div class="price-box">
+      <div class="price-old">通常価格　¥3,000,000</div>
+      <div class="price-new"><small>本日限定</small> ¥1,000,000</div>
+      <div class="price-note">※税込・送料・開運効果は別途</div>
+    </div>
+
+    <ul class="benefits">
+      <li>金運アップ<span class="note">（自己申告制・個人の感想です）</span></li>
+      <li>恋愛運・対人運アップ<span class="note">（壺を見せると話題になります）</span></li>
+      <li>厄除け・無病息災<span class="note">（医学的根拠は一切ありません）</span></li>
+      <li>来客時の話題づくりに最適<span class="note">（「これ、いくらだと思う？」）</span></li>
+      <li>世界に1点だけのプレミア感<span class="note">（在庫がないので再入荷もありません）</span></li>
+    </ul>
+
+    <div class="reviews-title">お客様の声</div>
+
+    <div class="review">
+      玄関に置いた翌日、駐車場で100円玉を見つけました。これはもう壺のおかげだと思います。
+      <span class="who">― A様（40代・自営業）</span>
+    </div>
+    <div class="review">
+      家に壺をおいたら、10年間帰ってこなかった父が帰ってきました！
+      <span class="who">― B様（30代・会社員）</span>
+    </div>
+    <div class="review">
+      正直、高いとは思いました。でも買った瞬間、謎の安心感に包まれました。
+      <span class="who">― C様（50代・主婦）</span>
+    </div>
+
+    <div class="cta-wrap">
+      <button class="cta" onclick="document.getElementById('reveal').classList.add('show'); document.getElementById('reveal').scrollIntoView({behavior:'smooth'});">
+        🔮 今すぐこの壺で人生を変える 🔮
+      </button>
+      <div class="cta-note">※ボタンを押すと、あなたの運命が動き出します</div>
+    </div>
+
+    <div id="reveal">
+      <h2>ご購入ありがとうございます</h2>
+      <p class="msg">
+        壺の中を覗いてみると、そこには――<br>
+        あなたの新しい"運"が、もう届いていました。
+      </p>
+      <div class="daichi-frame">
+        <img src="daichi.jpg" alt="あなたの運"
+             onerror="this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27400%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%23fff3d6%27/%3E%3Ctext x=%2750%25%27 y=%2745%25%27 font-size=%2718%27 text-anchor=%27middle%27 fill=%27%238a0f0f%27 font-family=%27sans-serif%27%3Edaichi.jpg%3C/text%3E%3Ctext x=%2750%25%27 y=%2758%25%27 font-size=%2712%27 text-anchor=%27middle%27 fill=%27%238a0f0f%27 font-family=%27sans-serif%27%3Eをこのフォルダに置いてください%3C/text%3E%3C/svg%3E'">
+        <div class="cap">これがあなたの"福"です。</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    ※本ページはジョークコンテンツです。「幸せになる壺」は陶芸ブランド「土と薬」制作の実在する作品ですが、<br>
+    開運・金運・恋愛運等への効果効能は保証されておらず、医学的・科学的根拠もありません。<br>
+    どうぞ笑ってお楽しみください。
+  </footer>
+
+</body>
+</html>
