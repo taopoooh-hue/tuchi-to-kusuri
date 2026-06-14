@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>土と薬｜薬剤師ハシモトサトシがつくる、ふだんのうつわ</title>
-<meta name="description" content="「土と薬」— 会津で薬局に立つかたわら、土をこねています。薪ストーブの灰から釉薬を作る、薬剤師ハシモトサトシの手しごとのうつわ。会津本郷せと市に出品します。">
+<meta name="description" content="「土と薬」— 会津で薬局に立つかたわら、土をこねています。薪ストーブの灰から釉薬を作る、薬剤師ハシモトサトシの手しごとのうつわ。会津本郷せと市、おかげさまで完売いたしました。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
@@ -155,8 +155,18 @@
   /* ---- event ---- */
   .event{padding:clamp(60px,9vw,110px) 0;border-top:1px solid var(--line)}
   .event-card{
-    background:var(--paper-card);border:1px solid var(--line);
+    background:var(--paper-card);border:1px solid var(--line);position:relative;
     padding:clamp(34px,5vw,64px);display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(34px,5vw,64px);align-items:center;
+  }
+  .soldout-stamp{
+    position:absolute;top:24px;right:24px;
+    border:2px solid var(--clay);color:var(--clay);background:rgba(244,239,228,.85);
+    font-family:var(--latin);font-style:italic;font-weight:600;
+    font-size:1.05rem;letter-spacing:.25em;text-transform:uppercase;
+    padding:8px 18px;border-radius:2px;transform:rotate(-7deg);
+  }
+  @media(max-width:520px){
+    .soldout-stamp{font-size:.85rem;padding:6px 12px;top:14px;right:14px}
   }
   .event-card h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin:14px 0 22px;line-height:1.4}
   .event-card p{color:var(--ink-soft);margin-bottom:30px;max-width:30em}
@@ -239,7 +249,7 @@
       <h1>薬剤師がつくる、<br>ふだんの<span class="clay">うつわ</span>。</h1>
       <p class="lead">会津で薬局に立つかたわら、土をこねています。<br>毎日の食卓が、すこし整うような器を。ひとつずつ手づくりで。</p>
       <div class="hero-cta">
-        <a href="#event" class="btn btn-fill">会津本郷せと市に出品します</a>
+        <a href="#event" class="btn btn-fill">会津本郷せと市、完売御礼</a>
         <a href="#works" class="btn btn-line">うつわを見る</a>
       </div>
     </div>
@@ -304,18 +314,18 @@
 <section class="event" id="event">
   <div class="wrap">
     <div class="event-card reveal">
+      <div class="soldout-stamp">sold out</div>
       <div>
-        <span class="label">exhibition</span>
-        <h2 class="jp-head">会津本郷せと市に<br>出品します。</h2>
-        <p>東北最古の焼き物産地・会津美里町（旧本郷町）で開かれる、夏の風物詩。朝4時、まだ薄暗いなか、懐中電灯片手の掘り出し物さがしが始まります。豆皿や箸置き、小さなうつわを並べてお待ちしています。</p>
-        <a href="#contact" class="btn btn-fill">最新情報をうけとる</a>
+        <span class="label">exhibition — report</span>
+        <h2 class="jp-head">会津本郷せと市<br>無事、完売しました。</h2>
+        <p>朝早くから足を運んでくださった皆さま、ひとつひとつ手に取って選んでくださった皆さま、本当にありがとうございました。出品したうつわは、おかげさまですべて新しい持ち主のもとへ届きました。次回の出品情報は、note やSNSでお知らせします。</p>
+        <a href="#contact" class="btn btn-fill">次回情報をうけとる</a>
       </div>
       <div class="event-info">
         <dl>
-          <dt>日程</dt><dd class="big">2026年6月14日（日）</dd>
-          <dt>時間</dt><dd>4:00 〜 12:00</dd>
+          <dt>結果</dt><dd class="big">完売御礼</dd>
+          <dt>日程</dt><dd>2026年6月14日（日）</dd>
           <dt>会場</dt><dd>瀬戸町通り（会津美里町 本郷地域）</dd>
-          <dt>アクセス</dt><dd>会津本郷駅から徒歩15分</dd>
         </dl>
       </div>
     </div>
